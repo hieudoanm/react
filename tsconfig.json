@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"target": "ES2020", // Modern JS output
+		"module": "nodenext", // ES modules for bundlers
+		"lib": ["DOM", "ES2020"], // Include DOM + ES features
+		"jsx": "react-jsx", // React 17+ JSX transform
+		"declaration": true, // Emit type declarations
+		"declarationDir": "dist/types", // Store types in dist
+		"outDir": "dist", // Output directory
+		"rootDir": "src", // Source root
+		"moduleResolution": "nodenext", // Resolve modules like Node
+		"esModuleInterop": true, // Allows default imports from CommonJS
+		"forceConsistentCasingInFileNames": true,
+		"strict": true, // All strict type checks
+		"skipLibCheck": true, // Skip type checking node_modules
+		"isolatedModules": true, // Required for Babel / ts-loader
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"resolveJsonModule": true // Allows importing JSON files
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
+}
