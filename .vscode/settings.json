@@ -22,8 +22,5 @@
       "other": "on"
     }
   },
-  "gopls": {
-    "experimentalWorkspaceModule": true
-  },
   "vsicons.presets.angular": true
 }
