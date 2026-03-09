@@ -3,12 +3,12 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - 'master'
-      - 'develop'
-      - 'hotfix/**'
-      - 'feature/**'
-      - 'renovate/**'
-      - 'dependabot/**'
+      - "master"
+      - "develop"
+      - "hotfix/**"
+      - "feature/**"
+      - "renovate/**"
+      - "dependabot/**"
 
 jobs:
   ci:
@@ -22,11 +22,11 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: '10.31.0'
+          version: "10.31.0"
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '25.7.0'
+          node-version: "25.8.0"
       - name: Install Dependencies
         run: pnpm install
       - name: Linting
