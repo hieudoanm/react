@@ -1,0 +1,52 @@
+import '@json/styles/globals.css';
+import type { AppProps } from 'next/app';
+import { Geist, Geist_Mono } from 'next/font/google';
+import Head from 'next/head';
+import { FC } from 'react';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+const App: FC<AppProps> = ({ Component, pageProps }) => {
+  return (
+    <>
+      <Head>
+        <title>JSON</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        {/* Meta tags for SEO and social media */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="converter" />
+        <meta name="theme-color" content="#171717" />
+        {/* Open Graph tags */}
+        <meta property="og:title" content="JSON" />
+        <meta property="og:description" content="converter" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/favicon.png" />
+        <meta
+          property="og:url"
+          content="https://hieudoanm.github.io/converter"
+        />
+        {/* Twitter card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JSON" />
+        <meta name="twitter:description" content="converter" />
+        <meta name="twitter:image" content="/favicon.png" />
+      </Head>
+
+      <div className={`${geistSans.className} ${geistMono.className}`}>
+        <Component {...pageProps} />
+      </div>
+    </>
+  );
+};
+
+export default App;
