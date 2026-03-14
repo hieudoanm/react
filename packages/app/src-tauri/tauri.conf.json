@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "json",
+  "productName": "JSON",
   "version": "0.0.1",
-  "identifier": "com.tauri.dev",
+  "identifier": "io.github.hieudoanm.json",
   "build": {
     "frontendDist": "../../../docs",
     "devUrl": "http://localhost:3000",
